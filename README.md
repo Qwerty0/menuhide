@@ -7,7 +7,7 @@ Maybe you're on a small screen. Maybe there's already too much clutter in the si
 
 This is a little tool that can recognize what site you're on and issue some quick javascript that will hide the menu bar. It depends on the exact structure of each site's HTML, so it's not universal and it can be broken at any time by a redesign.
 
-At the moment it's set up as a bookmarklet, so copy the text in `bookmarklet.js` and use it as the url of a bookmark. Then click it whenever you're on an annoying site. Eventually I'd like to get it working with Greasemonkey, so that it'll automatically apply whenever you're on a matching site.
+Its original form is a bookmarklet: copy the text in `bookmarklet.js` and use it as the url of a bookmark. Then click it whenever you're on an annoying site. I've also got it working with Greasemonkey now, and you can find those scripts in the `grease/` directory. But there are some bugs, so the bookmarklet works best.
 
 Supported sites as of 2014-08-05:
 - twitter.com
