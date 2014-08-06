@@ -16,4 +16,5 @@ Supported sites as of 2014-08-05:
 - arstechnica.com
 - knowyourmeme.com
 - dailydot.com
+- Stack Exchange sites
 
