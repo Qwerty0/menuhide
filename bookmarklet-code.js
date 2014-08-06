@@ -3,12 +3,16 @@ String.prototype.endsWith = function(suffix) {
 };
 
 var domain = document.domain;
-
+//TODO: apply only when scrolled below the top
 if (domain.endsWith('twitter.com')) {
   $('.topbar.js-topbar')[0].style.visibility = 'hidden';
-} else if (domain.endsWith('nytimes.com')) { // no jQuery
+} else if (domain.endsWith('nytimes.com')) {
   document.getElementById('masthead').style.visibility = 'hidden';
-} else if (domain.endsWith('quora.com')) { // no jQuery
+} else if (domain.endsWith('youtube.com')) {
+  document.getElementById('masthead-positioner').style.visibility = 'hidden';
+  // keep the Youtube logo/link visible
+  document.getElementById('logo-container').style.visibility = 'visible';
+} else if (domain.endsWith('quora.com')) {
   document.getElementsByClassName('SiteHeader')[0].style.visibility = 'hidden';
 } else if (domain.endsWith('arstechnica.com')) {
   $('#primary')[0].style.visibility = 'hidden';
