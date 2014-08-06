@@ -21,4 +21,11 @@ if (domain.endsWith('twitter.com')) {
   $('.g-plusone-wrapper iframe')[0].style.visibility = 'hidden'; // G+ icon
 } else if (domain.endsWith('dailydot.com')) {
   $('#nav-bar')[0].style.visibility = 'hidden';
+} else if (domain.endsWith('stackexchange.com')
+    || domain.endsWith('stackoverflow.com'))
+    || domain.endsWith('askubuntu.com'))
+    || domain.endsWith('superuser.com'))
+    || domain.endsWith('serverfault.com'))
+    || domain.endsWith('mathoverflow.net')) {
+  document.getElementById('noscript-warning').style.visibility = 'hidden';
 }
