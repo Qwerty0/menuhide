@@ -15,7 +15,7 @@ if (domain.endsWith('twitter.com')) {
 } else if (domain.endsWith('quora.com')) {
   document.getElementsByClassName('SiteHeader')[0].style.visibility = 'hidden';
 } else if (domain.endsWith('arstechnica.com')) {
-  $('#primary')[0].style.visibility = 'hidden';
+  $('#masthead')[0].style.visibility = 'hidden';
 } else if (domain.endsWith('knowyourmeme.com')) {
   $('.floating-bar.floating-fixed')[0].style.visibility = 'hidden';
   $('.g-plusone-wrapper iframe')[0].style.visibility = 'hidden'; // G+ icon

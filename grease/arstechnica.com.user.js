@@ -5,7 +5,7 @@
 // @include     https://arstechnica.com/*
 // @exclude     http://arstechnica.com/
 // @exclude     https://arstechnica.com/
-// @version     1.0
+// @version     1.1
 // @grant       none
 // ==/UserScript==
-$('#primary')[0].style.visibility = 'hidden';
+$('#masthead')[0].style.visibility = 'hidden';
