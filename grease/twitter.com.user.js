@@ -5,7 +5,8 @@
 // @include     https://twitter.com/*
 // @exclude     http://twitter.com/
 // @exclude     https://twitter.com/
-// @version     1.0
+// @version     1.1
 // @grant       none
 // ==/UserScript==
-$('.topbar.js-topbar')[0].style.visibility = 'hidden';
+document.getElementsByClassName('topbar')[0].style.visibility = 'hidden';
+
