@@ -1,0 +1,1 @@
+$('.topbar.js-topbar')[0].style.visibility='hidden';$('.g-plusone-wrapper iframe')[0].style.visibility='hidden';
