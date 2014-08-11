@@ -3,32 +3,26 @@
 // @namespace   Menu Hide
 // @include     http://knowyourmeme.com/*
 // @include     https://knowyourmeme.com/*
-// @include     http://apis.google.com/*
-// @include     https://apis.google.com/*
-// @run-at      document-end
 // @version     1.1
 // @grant       none
 // ==/UserScript==
 $('.floating-bar.floating-fixed')[0].style.visibility = 'hidden';
-//$('.g-plusone-wrapper iframe')[0].style.visibility = 'hidden'; // G+ icon
-
-var e = document.getElementsByClassName('g-plusone-wrapper')[0];
-var children = e.children;
-var message = e.tagName+":";
-for (var i = 0; i < children.length; i++) {
-  message += "\n  "+children[i].tagName;
+/* Google Plus icon.
+For some reason, maybe because of the iframe, it's not available to be hidden
+at the end of the document load. So a delay is necessary. And it even seems to
+pop up again after being hidden. Because of that, and the fact that the document
+load can take a while, this tries hiding it every second for 5 seconds.
+*/
+function hideGPlus() {
+  var frames = $('.g-plusone-wrapper iframe');
+  // if the element exists and it's not hidden yet
+  if (frames.length > 0 && frames[0].style.visibility !== 'hidden') {
+    frames[0].style.visibility = 'hidden';
+  }
 }
-alert(message);
-
-e = children[0];
-var children = e.children;
-var message = e.tagName+":";
-for (var i = 0; i < children.length; i++) {
-  message += "\n  "+children[i].tagName;
+var delay = 0;
+for (var i = 0; i < 5; i++) {
+  delay += 1000;
+  window.setTimeout(hideGPlus, delay);
 }
-alert(message);
 
-e = children[0];
-alert(e.tagName+': "'+e.style.visibility+'"');
-e.style.visibility = 'hidden';
-alert(e.tagName+': "'+e.style.visibility+'"');
