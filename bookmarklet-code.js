@@ -22,10 +22,10 @@ if (domain.endsWith('twitter.com')) {
 } else if (domain.endsWith('dailydot.com')) {
   document.getElementById('nav-bar').style.visibility = 'hidden';
 } else if (domain.endsWith('stackexchange.com')
-    || domain.endsWith('stackoverflow.com'))
-    || domain.endsWith('askubuntu.com'))
-    || domain.endsWith('superuser.com'))
-    || domain.endsWith('serverfault.com'))
+    || domain.endsWith('stackoverflow.com')
+    || domain.endsWith('askubuntu.com')
+    || domain.endsWith('superuser.com')
+    || domain.endsWith('serverfault.com')
     || domain.endsWith('mathoverflow.net')) {
   document.getElementById('noscript-warning').style.visibility = 'hidden';
 }
