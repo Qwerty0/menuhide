@@ -5,7 +5,7 @@
 // @include     https://www.dailydot.com/*
 // @exclude     http://www.dailydot.com/
 // @exclude     https://www.dailydot.com/
-// @version     1.0
+// @version     1.1
 // @grant       none
 // ==/UserScript==
-$('#nav-bar')[0].style.visibility = 'hidden';
+document.getElementById('nav-bar').style.visibility = 'hidden';

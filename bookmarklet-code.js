@@ -5,7 +5,7 @@ String.prototype.endsWith = function(suffix) {
 var domain = document.domain;
 //TODO: apply only when scrolled below the top
 if (domain.endsWith('twitter.com')) {
-  $('.topbar.js-topbar')[0].style.visibility = 'hidden';
+  document.getElementsByClassName('topbar')[0].style.visibility = 'hidden';
 } else if (domain.endsWith('nytimes.com')) {
   document.getElementById('masthead').style.visibility = 'hidden';
 } else if (domain.endsWith('youtube.com')) {
@@ -15,12 +15,12 @@ if (domain.endsWith('twitter.com')) {
 } else if (domain.endsWith('quora.com')) {
   document.getElementsByClassName('SiteHeader')[0].style.visibility = 'hidden';
 } else if (domain.endsWith('arstechnica.com')) {
-  $('#masthead')[0].style.visibility = 'hidden';
+  document.getElementById('masthead').style.visibility = 'hidden';
 } else if (domain.endsWith('knowyourmeme.com')) {
-  $('.floating-bar.floating-fixed')[0].style.visibility = 'hidden';
-  $('.g-plusone-wrapper iframe')[0].style.visibility = 'hidden'; // G+ icon
+  document.getElementsByClassName('floating-bar')[0].style.visibility = 'hidden';
+  document.querySelectorAll('.g-plusone-wrapper iframe')[0].style.visibility = 'hidden'; // G+ icon
 } else if (domain.endsWith('dailydot.com')) {
-  $('#nav-bar')[0].style.visibility = 'hidden';
+  document.getElementById('nav-bar').style.visibility = 'hidden';
 } else if (domain.endsWith('stackexchange.com')
     || domain.endsWith('stackoverflow.com'))
     || domain.endsWith('askubuntu.com'))
