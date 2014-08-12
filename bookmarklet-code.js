@@ -16,6 +16,11 @@ if (domain.endsWith('twitter.com')) {
   document.getElementsByClassName('SiteHeader')[0].style.visibility = 'hidden';
 } else if (domain.endsWith('arstechnica.com')) {
   document.getElementById('masthead').style.visibility = 'hidden';
+  // keep homepage link visible, but out of the way
+  var home = document.getElementById('home-icon');
+  home.style.visibility = 'visible';
+  home.style.position = 'relative';
+  home.style.left = '-16px';
 } else if (domain.endsWith('knowyourmeme.com')) {
   document.getElementsByClassName('floating-bar')[0].style.visibility = 'hidden';
   document.querySelectorAll('.g-plusone-wrapper iframe')[0].style.visibility = 'hidden'; // G+ icon
