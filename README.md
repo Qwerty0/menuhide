@@ -12,6 +12,7 @@ Its main implementation is in a set of Greasemonkey scripts, found in the `greas
 Supported sites as of 2014-08-19:
 - twitter.com
 - youtube.com
+- yahoo.com
 - nytimes.com
 - quora.com
 - arstechnica.com
@@ -21,5 +22,7 @@ Supported sites as of 2014-08-19:
 - forbes.com
 - cc.com (video pages)
 - mashable.com
+- doodle.com
 - learncodethehardway.org
+
 

@@ -8,11 +8,13 @@
 // ==/UserScript==
 document.getElementsByClassName('floating-bar')[0].style.visibility = 'hidden';
 /* Google Plus icon.
-For some reason, maybe because of the iframe, it's not available to be hidden
-at the end of the document load. So a delay is necessary. And it even seems to
-pop up again after being hidden. Because of that, and the fact that the document
-load can take a while, this tries hiding it every second for 5 seconds.
-*/
+ * It seems to be loaded after the end of the page load (when this script is
+ * executed). So it's not yet available at this point. It can't even be hidden
+ * by adding a CSS rule to a stylesheet, since the iframe has inline CSS
+ * explicitly making it visible.
+ * So instead we send of several timed events that wait 1 sec, 2 sec, etc up
+ * 'till 5 seconds, after which it's hopefully loaded, then hide it.
+ */
 function hideGPlus() {
   var frames = document.querySelectorAll('.g-plusone-wrapper iframe');
   // if the element exists and it's not hidden yet
