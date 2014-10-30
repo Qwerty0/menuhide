@@ -9,11 +9,13 @@ This is a little tool that can recognize what site you're on and execute some qu
 
 Its main implementation is in a set of Greasemonkey scripts, found in the `grease/` directory. However, there's also a bookmarklet that you can use as a fallback, though it works less often and on fewer sites. Just copy the text in `bookmarklet.js` and use it as the url of a bookmark. Then click it whenever you're on an annoying site.
 
-Supported sites as of 2014-09-02:
+Supported sites as of 2014-10-30:
 - twitter.com
 - youtube.com
+- tumblr.com
 - yahoo.com
 - nytimes.com
+- washingtonpost.com
 - quora.com
 - arstechnica.com
 - knowyourmeme.com
