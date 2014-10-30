@@ -3,7 +3,7 @@
 // @namespace   Menu Hide
 // @include     http://knowyourmeme.com/*
 // @include     https://knowyourmeme.com/*
-// @version     1.3
+// @version     1.4
 // @grant       none
 // ==/UserScript==
 document.getElementsByClassName('floating-bar')[0].style.visibility = 'hidden';
@@ -13,7 +13,7 @@ document.getElementsByClassName('floating-bar')[0].style.visibility = 'hidden';
  * by adding a CSS rule to a stylesheet, since the iframe has inline CSS
  * explicitly making it visible.
  * So instead we send of several timed events that wait 1 sec, 2 sec, etc up
- * 'till 5 seconds, after which it's hopefully loaded, then hide it.
+ * 'till 10 seconds, after which it's hopefully loaded, then hide it.
  */
 function hideGPlus() {
   var frames = document.querySelectorAll('.g-plusone-wrapper iframe');
@@ -22,9 +22,8 @@ function hideGPlus() {
     frames[0].style.visibility = 'hidden';
   }
 }
-var delay = 0;
-for (var i = 0; i < 5; i++) {
-  delay += 1000;
+// delay is in milliseconds
+for (var delay = 0; delay < 10000; delay+=1000) {
   window.setTimeout(hideGPlus, delay);
 }
 
